@@ -6,78 +6,18 @@ This repo can be used as a starting point for developing a production-ready appl
 Postgres in a Dockerized environment with deployment to Heroku.
 
 ## Live web app
-
-To access the React application, go to [gym-log.herokuapp.com](https://gym-log.herokuapp.com/).
-
-To access the Django Swagger API endpoints, go
-to [gym-log.herokuapp.com/swagger/](https://gym-log.herokuapp.com/swagger/).
-
-> **_NOTE:_**  The web application may take a few seconds to start up.
-
----
-![Live web app screenshot](https://i.ibb.co/jLYCLP4/Screenshot-2024-06-30-205650.png)
+https://staging.d27u69llr305tk.amplifyapp.com
 
 ## Motivation for creating the app
 
-I liked the mobile version of the [strong app](https://www.strong.app/) that allows logging workouts, viewing them, and
-getting a list of available exercises. So I implemented the basic functionality of
-the [strong app](https://www.strong.app/) in a CRUD Web Application with Django & React.
+Personal Connection to Fitness: Fitness plays a significant role in my overall life, as I regularly engage in many training routines and understand the importance of tracking progress and maintaining a healthy lifestyle. By working on this project, I was able to combine my technical abilities with my passion for fitness, which kept me motivated and engaged throughout the development process.
 
-## Local deployment
+Addressing Real-World Needs: In today's fast-paced world, many individuals look for convenient ways to monitor their fitness journeys. I recognized a growing demand for tools that help users track workouts, nutrition, and overall health metrics. By creating a fitness API, I aimed to provide a resource that could help users manage their fitness goals more effectively. This project didn’t only allow me to contribute to a cause I care about but also challenged me to think about user experience and functionality in a practical context.
 
-1) Install docker: https://docs.docker.com/get-docker/
-2) Clone github repo.
-3) Run: `docker-compose up --build`.
+Learning and Growth: Additionally, working with Django was an important factor in my decision. I wanted to deepen my understanding of web development frameworks and build my skills in creating robust APIs. Django's powerful features and ease of use made it an ideal choice for this project, allowing me to focus on creating a functional and user-friendly API that meets the needs of fitness enthusiasts.
 
-To access the fronted part of application open [http://localhost:3000](http://localhost:3000) in your browser.
+Conclusion: In summary, my choice to create a fitness API using Django comes from a combination of personal passion, the opportunity to address real-world needs, and a desire for professional growth. This project has not only bettered my technical skills but has also reinforced my belief in the importance of integrating personal interests into my work. I look forward to continuing to develop this project and exploring new ways to support individuals on their fitness journeys.
 
-To view `Swagger API endpoints` open [http://localhost:8000/swagger/](http://localhost:8000/swagger/) in your browser.
-
-To view `Django admin site` open [http://localhost:8000/admin/](http://localhost:8000/admin/) in your browser.
-
-## Production deployment
-
-1) [Create Heroku Account](https://signup.heroku.com/dc)
-2) [Download/Install/Setup Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-3) After installation, log into Heroku CLI: `heroku login`.
-4) Run: `heroku create <your app name>` to create the Heroku application.
-5) Run: `heroku stack:set container` so Heroku knows this is a containerized application.
-6) Run: `heroku addons:create heroku-postgresql:hobby-dev` which creates the postgres add-on for Heroku.
-7) Set a `SECRET_KEY` in Heroku config vars settings.
-8) Set the URL of your application, e.g. `https://<app name>.herokuapp.com`, into environment variable `HOST_NAME` in
-   Heroku config vars settings.
-9) Deploy your app by running: `git push heroku master`.
-10) Go to `<your app name>.herokuapp.com` to see the published web application.
-
-### Dockerfile.prod
-
-Heroku uses multi-stage Docker build `Dockerfile.prod` file to build and run the application.
-
-If you want to build and run the production Dockerfile locally, use these commands:
-
-```shell
-docker build --build-arg=PORT=<port num> -t gym-log:latest .  
-docker run -it -p <port num>:<port num> gym-log:latest
-```
-
----
-
-### Main tools and libraries
-
-Backend:
-
-- `Django` as a web framework.
-- `Django REST framework` for building web APIs, serialization, and deserialization.
-- `JWT authentication` for securely transmitting information between frontend and backend applications.
-- `PostgreSQL` as a database in production.
-
-Frontend:
-
-- `React` for building user interface.
-- `React Bootstrap` for simplifying the creation and styling of React components.
-- `React Query` for managing server state, getting data from the backend, and updating it.
-- `Redux` for managing application state. And `Redux Persist` to store state between page reloads.
-- `Formik` and `Yup` for object schema validation for login and register pages.
 
 ### Ideas for improvement
 
