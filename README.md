@@ -1,10 +1,10 @@
 # Gym Log
 
-Full Stack Django & React Web App with JWT authentication.
+Full Stack Django & React Web App 
 
 This repo can be used as a starting point for developing a production-ready application using Django, React, and
-Postgres in a Dockerized environment with deployment to Heroku.
-
+Postgres in a Dockerized environment.
+W
 ## Live web app
 https://staging.d27u69llr305tk.amplifyapp.com
 
